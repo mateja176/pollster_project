@@ -1,7 +1,4 @@
 {% extends 'layout.html' %} {% block content %}
-<a class="btn btn-secondary btn-sm mb-3" href="{% url 'polls:index' %}"
-  >Back To Polls</a
->
 <h1 class="text-center mb-3">{{ question.question_text }}</h1>
 
 {% if error_message %}
@@ -29,4 +26,9 @@
     class="btn btn-success btn-lg btn-block mt-4"
   />
 </form>
+
+<a class="btn btn-secondary mt-3 d-block" href="{% url 'polls:index' %}"
+  >Back To Polls</a
+>
+
 {% endblock %}
